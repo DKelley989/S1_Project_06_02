@@ -14,6 +14,7 @@
 */
 
 /* Body Header Styles */
+/* This simply adds a box shadow around the body. */
 body {
     box-shadow: rgb(51, 51, 51) 10px 10px 50px, rgb(51, 51, 51) -10px 10px 50px;
 }
@@ -27,17 +28,47 @@ body>header nav.tabs {
     background-size: cover;
 }
 
+/* This style makes the navigation links at the top of the page lean backward to make them look like trapezoids. */
+body>header nav.tabs li {
+    transform: perspective(50px) rotateX(20deg);
+}
 
-
+/* This style changes hovered links to a white-ish background color. */
+body>header nav.tabs li a:hover {
+    background-color: rgb(231, 231, 231);
+}
 
 /* Left Section Styles */
+/* These styles make the border around the vertical navigation links rounded and sets their border radius to 25 pixels. */
+section#left nav.vertical {
+    border: 1px solid rgb(20, 167, 170);
+    border-radius: 25px;
+}
 
-
-
+section#left nav.vertical h1 {
+    border-radius: 25px 25px 0px 0px;
+}
 
 /* Center Article Styles */
-
-
-
+/* This style gives the center article a radial gradient and a rounded border with a radius of 50 pixels and also adds a box shadow. */
+section#center article {
+    background: radial-gradient(white 30%, rgb(151, 151, 151));
+    border: 1px solid rgb(151, 151, 151);
+    border-radius: 50px;
+    box-shadow: 10px 10px 20px rgb(51, 51, 51);
+}
 
 /* Blockquote Styles */
+/* This style adds a background image behind the quotes and gives them a drop shadow. */
+blockquote {
+    background-image: url(sf_speech.png);
+    background-repeat: round;
+    background-size: cover;
+    -webkit-filter: drop-shadow(5px 5px 10px rgb(51, 51, 51));
+    filter: drop-shadow(5px 5px 10px rgb(51, 51, 51));
+}
+
+/* This style simply makes the cite images of the blockquotes rounded.*/
+cite img {
+    border-radius: 50%;
+}
